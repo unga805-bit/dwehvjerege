@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Papeleria Vidal - Projecte Disseny</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Papeleria Vidal</h1>
+      <p>Botiga de material escolar amb serveis basics i atencio propera.</p>
+    </header>
+
+    <section id="video-promocional">
+      <h2>Video Promocional</h2>
+      <video controls width="100%" max-width="640">
+        <source src="video/Video_Promocional.mp4" type="video/mp4" />
+        El teu navegador no suporta el video.
+      </video>
+    </section>
+
+    <section id="podcast">
+      <h2>Podcast de la Botiga</h2>
+      <audio controls>
+        <source src="0406.MP3" type="audio/mpeg" />
+        El teu navegador no suporta l'audio.
+      </audio>
+      <p>Escolta una breu presentacio dels nostres productes i serveis.</p>
+    </section>
+
+    <section id="slideshow">
+      <h2>Carrusel de Productes</h2>
+      <div class="carousel">
+        <img src="img/Libreta.png" alt="Llibretes i carpetes" class="active" />
+        <img src="img/Bolis y rotuladores.png" alt="Boligrafs i retoladors" />
+        <img src="img/Fotocopiadora.png" alt="Servei de fotocopies" />
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+    </section>
+
+    <section id="mapa">
+      <h2>Mapa Interactiu</h2>
+      <iframe
+        src="https://www.google.com/maps?q=Avinguda%20del%20President%20Companys%2C%203%2C%2043005%20Tarragona&output=embed"
+        width="100%"
+        height="400"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </section>
+
+    <section id="infografia">
+      <h2>Infografia Interactiva</h2>
+      <p class="infografia-intro">
+        Explora els punts clau de Papeleria Vidal. Fes clic a cada bloc per veure
+        com combinem productes escolars, serveis basics i una atencio propera.
+      </p>
+
+      <div class="infografia-layout">
+        <div class="infografia-sidebar" aria-label="Temes de la infografia">
+          <button
+            class="info-node active"
+            type="button"
+            data-title="Serveis essentials"
+            data-text="Oferim fotocopies, impressions, enquadernacions i ajuda rapida per a encarrecs escolars i del barri."
+            data-highlight="Servei agil"
+          >
+            <span class="info-node-number">01</span>
+            <span class="info-node-copy">
+              <strong>Serveis</strong>
+              <span>Suport rapid per al dia a dia.</span>
+            </span>
+          </button>
+
+          <button
+            class="info-node"
+            type="button"
+            data-title="Productes principals"
+            data-text="Les categories mes destacades son llibretes, carpetes, boligrafs, retoladors i material escolar basic per a estudiants i families."
+            data-highlight="Essencial escolar"
+          >
+            <span class="info-node-number">02</span>
+            <span class="info-node-copy">
+              <strong>Productes</strong>
+              <span>El material que mes es necessita.</span>
+            </span>
+          </button>
+
+          <button
+            class="info-node"
+            type="button"
+            data-title="Funcionament de la botiga"
+            data-text="La botiga treballa amb atencio directa, recomanacio personalitzada i resposta immediata per resoldre compres petites sense complicacions."
+            data-highlight="Atencio directa"
+          >
+            <span class="info-node-number">03</span>
+            <span class="info-node-copy">
+              <strong>Funcionament</strong>
+              <span>Proximitat, rapidesa i orientacio.</span>
+            </span>
+          </button>
+
+          <button
+            class="info-node"
+            type="button"
+            data-title="Valors corporatius"
+            data-text="La proposta de valor es basa en el bon tracte, preus assequibles, rapidesa i una relacio propera amb escoles, families i veins."
+            data-highlight="Tracte huma"
+          >
+            <span class="info-node-number">04</span>
+            <span class="info-node-copy">
+              <strong>Valors</strong>
+              <span>Confianca i proximitat local.</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="infografia-board">
+          <div class="infografia-panel" id="infografia-panel">
+            <div class="panel-tag" id="panel-highlight">Servei agil</div>
+            <h3 id="panel-title">Serveis essentials</h3>
+            <p id="panel-text">
+              Oferim fotocopies, impressions, enquadernacions i ajuda rapida per a
+              encarrecs escolars i del barri.
+            </p>
+          </div>
+
+          <div class="infografia-metrics" aria-label="Resum visual del negoci">
+            <article class="metric-card">
+              <span class="metric-label">Producte estrella</span>
+              <strong>Llibretes i carpetes</strong>
+              <div class="metric-bar">
+                <span style="width: 88%"></span>
+              </div>
+            </article>
+
+            <article class="metric-card">
+              <span class="metric-label">Servei mes util</span>
+              <strong>Fotocopies i impressions</strong>
+              <div class="metric-bar">
+                <span style="width: 92%"></span>
+              </div>
+            </article>
+
+            <article class="metric-card">
+              <span class="metric-label">Valor diferencial</span>
+              <strong>Atencio propera</strong>
+              <div class="metric-bar">
+                <span style="width: 96%"></span>
+              </div>
+            </article>
+          </div>
+
+          <div class="infografia-flow" aria-label="Funcionament de l'empresa">
+            <div class="flow-step">
+              <span>1</span>
+              <p>El client explica la necessitat.</p>
+            </div>
+            <div class="flow-line"></div>
+            <div class="flow-step">
+              <span>2</span>
+              <p>La botiga recomana producte o servei.</p>
+            </div>
+            <div class="flow-line"></div>
+            <div class="flow-step">
+              <span>3</span>
+              <p>Entrega rapida i tracte personal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        const slides = document.querySelectorAll(".carousel img");
+        slides.forEach((slide) => slide.classList.remove("active"));
+        slideIndex = (slideIndex + slides.length) % slides.length;
+        slides[slideIndex].classList.add("active");
+      }
+
+      function changeSlide(n) {
+        slideIndex += n;
+        showSlides();
+      }
+
+      setInterval(() => changeSlide(1), 3000);
+
+      const infoNodes = document.querySelectorAll(".info-node");
+      const panelTitle = document.getElementById("panel-title");
+      const panelText = document.getElementById("panel-text");
+      const panelHighlight = document.getElementById("panel-highlight");
+      const panel = document.getElementById("infografia-panel");
+
+      infoNodes.forEach((node) => {
+        node.addEventListener("click", () => {
+          infoNodes.forEach((item) => item.classList.remove("active"));
+          node.classList.add("active");
+
+          panel.classList.remove("panel-animate");
+          void panel.offsetWidth;
+          panel.classList.add("panel-animate");
+
+          panelTitle.innerText = node.dataset.title;
+          panelText.innerText = node.dataset.text;
+          panelHighlight.innerText = node.dataset.highlight;
+        });
+      });
+    </script>
+  </body>
+</html>
